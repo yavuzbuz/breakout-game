@@ -30,8 +30,59 @@ while game_is_on:
 
     if ball.xcor() > 655 or ball.xcor() < -655:
         ball.bounce_x()
+    if ball.ycor() > 430:
+        ball.bounce_y()
 
     if ball.distance(paddle) < 100 and ball.ycor() < -360:
         ball.bounce_y()
 
+    for brick in layer1.layer_1:
+        if ball.distance(brick) < 60 and 120 < ball.ycor() < 160:
+            ball.bounce_y()
+            brick.reset()
+            ball.move_speed *= 0.9
+
+    for brick in layer2.layer_2:
+        if ball.distance(brick) < 60 and 160 < ball.ycor() < 200:
+            ball.bounce_y()
+            brick.reset()
+            ball.move_speed *= 0.9
+
+    for brick in layer3.layer_3:
+        if ball.distance(brick) < 60 and 200 < ball.ycor() < 240:
+            ball.bounce_y()
+            brick.reset()
+            ball.move_speed *= 0.9
+
+    for brick in layer4.layer_4:
+        if ball.distance(brick) < 60 and 240 < ball.ycor() < 280:
+            ball.bounce_y()
+            brick.reset()
+            ball.move_speed *= 0.9
+
+    for brick in layer5.layer_5:
+        if ball.distance(brick) < 60 and 280 < ball.ycor() < 320:
+            ball.bounce_y()
+            brick.reset()
+            ball.move_speed *= 0.9
+
+    for brick in layer6.layer_6:
+        if ball.distance(brick) < 60 and 320 < ball.ycor() < 360:
+            ball.bounce_y()
+            brick.reset()
+            ball.move_speed *= 0.9
+
+    for brick in layer7.layer_7:
+        if ball.distance(brick) < 60 and 360 < ball.ycor() < 400:
+            ball.bounce_y()
+            brick.reset()
+            ball.move_speed *= 0.9
+
+    if ball.ycor() < -450:
+        ball.reset()
+        paddle.reset()
+        game_is_on = False
+
+
 screen.exitonclick()
+
