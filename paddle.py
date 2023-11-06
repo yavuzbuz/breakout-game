@@ -11,7 +11,7 @@ class Paddle(Turtle):
         self.speed("fastest")
         self.penup()
         self.goto(0, -390)
-        self.MOVING, self.DRAGGING = range(2)  # states
+        self.MOVING, self.DRAGGING = range(2)
         self.state = self.MOVING
         self.screen = screen
         self.onmove(self.screen, self.move_handler)

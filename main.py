@@ -21,5 +21,10 @@ while game_is_on:
     screen.update()
     ball.move()
 
+    if ball.xcor() > 680 or ball.xcor() < -680:
+        ball.bounce_x()
+
+    if ball.distance(paddle) < 100 and ball.ycor() < -360:
+        ball.bounce_y()
 
 screen.exitonclick()
