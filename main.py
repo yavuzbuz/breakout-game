@@ -2,6 +2,7 @@ from turtle import Screen
 from ball import Ball
 from paddle import Paddle
 from bricks import *
+from game_over import Lost, Won
 import time
 
 screen = Screen()
@@ -10,6 +11,7 @@ screen.setup(width=1350, height=900)
 screen.bgcolor("black")
 screen.title("Breakout")
 screen.tracer(0)
+
 
 ball = Ball()
 paddle = Paddle(screen=screen)
@@ -20,6 +22,8 @@ layer4 = Layer4()
 layer5 = Layer5()
 layer6 = Layer6()
 layer7 = Layer7()
+
+layers = [layer1, layer2, layer3, layer4, layer5, layer6, layer7]
 
 game_is_on = True
 
@@ -41,6 +45,7 @@ while game_is_on:
             ball.bounce_y()
             brick.reset()
             ball.move_speed *= 0.9
+            print(layer1.layer_1)
 
     for brick in layer2.layer_2:
         if ball.distance(brick) < 60 and 160 < ball.ycor() < 200:
@@ -82,6 +87,9 @@ while game_is_on:
         ball.reset()
         paddle.reset()
         game_is_on = False
+        pen = Lost()
+
+
 
 
 screen.exitonclick()
