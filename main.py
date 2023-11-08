@@ -45,7 +45,10 @@ while game_is_on:
             ball.bounce_y()
             brick.reset()
             ball.move_speed *= 0.9
-            print(layer1.layer_1)
+
+            layer1.destroyed_bricks.append(brick)
+            if len(layer1.destroyed_bricks) == 12:
+                layer1.layer1_complete = True
 
     for brick in layer2.layer_2:
         if ball.distance(brick) < 60 and 150 < ball.ycor() < 170:
@@ -53,11 +56,19 @@ while game_is_on:
             brick.reset()
             ball.move_speed *= 0.9
 
+            layer2.destroyed_bricks.append(brick)
+            if len(layer2.destroyed_bricks) == 12:
+                layer2.layer2_complete = True
+
     for brick in layer3.layer_3:
         if ball.distance(brick) < 60 and 180 < ball.ycor() < 200:
             ball.bounce_y()
             brick.reset()
             ball.move_speed *= 0.9
+
+            layer3.destroyed_bricks.append(brick)
+            if len(layer3.destroyed_bricks) == 12:
+                layer3.layer3_complete = True
 
     for brick in layer4.layer_4:
         if ball.distance(brick) < 60 and 230 < ball.ycor() < 250:
@@ -65,11 +76,19 @@ while game_is_on:
             brick.reset()
             ball.move_speed *= 0.9
 
+            layer4.destroyed_bricks.append(brick)
+            if len(layer4.destroyed_bricks) == 12:
+                layer4.layer4_complete = True
+
     for brick in layer5.layer_5:
         if ball.distance(brick) < 60 and 260 < ball.ycor() < 280:
             ball.bounce_y()
             brick.reset()
             ball.move_speed *= 0.9
+
+            layer5.destroyed_bricks.append(brick)
+            if len(layer5.destroyed_bricks) == 12:
+                layer5.layer5_complete = True
 
     for brick in layer6.layer_6:
         if ball.distance(brick) < 60 and 290 < ball.ycor() < 310:
@@ -77,11 +96,19 @@ while game_is_on:
             brick.reset()
             ball.move_speed *= 0.9
 
+            layer6.destroyed_bricks.append(brick)
+            if len(layer6.destroyed_bricks) == 12:
+                layer6.layer6_complete = True
+
     for brick in layer7.layer_7:
         if ball.distance(brick) < 60 and 320 < ball.ycor() < 340:
             ball.bounce_y()
             brick.reset()
             ball.move_speed *= 0.9
+
+            layer7.destroyed_bricks.append(brick)
+            if len(layer7.destroyed_bricks) == 12:
+                layer7.layer7_complete = True
 
     if ball.ycor() < -450:
         ball.reset()
@@ -89,8 +116,12 @@ while game_is_on:
         game_is_on = False
         pen = Lost()
 
-
+    if layer1.layer1_complete and layer2.layer2_complete and layer3.layer3_complete and layer4.layer4_complete and\
+            layer5.layer5_complete and layer6.layer6_complete and layer7.layer7_complete:
+        ball.reset()
+        paddle.reset()
+        game_is_on = False
+        pen = Won()
 
 
 screen.exitonclick()
-

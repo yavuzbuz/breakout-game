@@ -1,6 +1,9 @@
 from turtle import Turtle
 
 
+completed_layers = 0
+
+
 class Layer1:
 
     def __init__(self):
@@ -12,6 +15,9 @@ class Layer1:
 
         location = -720
         append_num = 110
+        global completed_layers
+        self.destroyed_bricks = []
+        self.layer1_complete = False
         for brick in self.layer_1:
             brick.shape("square")
             brick.shapesize(stretch_wid=1, stretch_len=5)
@@ -33,6 +39,9 @@ class Layer2:
 
         location = -720
         append_num = 110
+        global completed_layers
+        self.destroyed_bricks = []
+        self.layer2_complete = False
         for brick in self.layer_2:
             brick.shape("square")
             brick.shapesize(stretch_wid=1, stretch_len=5)
@@ -54,6 +63,9 @@ class Layer3:
 
         location = -720
         append_num = 110
+        global completed_layers
+        self.destroyed_bricks = []
+        self.layer3_complete = False
         for brick in self.layer_3:
             brick.shape("square")
             brick.shapesize(stretch_wid=1, stretch_len=5)
@@ -75,6 +87,9 @@ class Layer4:
 
         location = -720
         append_num = 110
+        global completed_layers
+        self.destroyed_bricks = []
+        self.layer4_complete = False
         for brick in self.layer_4:
             brick.shape("square")
             brick.shapesize(stretch_wid=1, stretch_len=5)
@@ -96,6 +111,9 @@ class Layer5:
 
         location = -720
         append_num = 110
+        global completed_layers
+        self.destroyed_bricks = []
+        self.layer5_complete = False
         for brick in self.layer_5:
             brick.shape("square")
             brick.shapesize(stretch_wid=1, stretch_len=5)
@@ -117,6 +135,9 @@ class Layer6:
 
         location = -720
         append_num = 110
+        global completed_layers
+        self.destroyed_bricks = []
+        self.layer6_complete = False
         for brick in self.layer_6:
             brick.shape("square")
             brick.shapesize(stretch_wid=1, stretch_len=5)
@@ -138,6 +159,9 @@ class Layer7:
 
         location = -720
         append_num = 110
+        global completed_layers
+        self.destroyed_bricks = []
+        self.layer7_complete = False
         for brick in self.layer_7:
             brick.shape("square")
             brick.shapesize(stretch_wid=1, stretch_len=5)
