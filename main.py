@@ -41,44 +41,44 @@ while game_is_on:
         ball.bounce_y()
 
     for brick in layer1.layer_1:
-        if ball.distance(brick) < 60 and 120 < ball.ycor() < 160:
+        if ball.distance(brick) < 60 and 120 < ball.ycor() < 140:
             ball.bounce_y()
             brick.reset()
             ball.move_speed *= 0.9
             print(layer1.layer_1)
 
     for brick in layer2.layer_2:
-        if ball.distance(brick) < 60 and 160 < ball.ycor() < 200:
+        if ball.distance(brick) < 60 and 150 < ball.ycor() < 170:
             ball.bounce_y()
             brick.reset()
             ball.move_speed *= 0.9
 
     for brick in layer3.layer_3:
-        if ball.distance(brick) < 60 and 200 < ball.ycor() < 240:
+        if ball.distance(brick) < 60 and 180 < ball.ycor() < 200:
             ball.bounce_y()
             brick.reset()
             ball.move_speed *= 0.9
 
     for brick in layer4.layer_4:
-        if ball.distance(brick) < 60 and 240 < ball.ycor() < 280:
+        if ball.distance(brick) < 60 and 230 < ball.ycor() < 250:
             ball.bounce_y()
             brick.reset()
             ball.move_speed *= 0.9
 
     for brick in layer5.layer_5:
-        if ball.distance(brick) < 60 and 280 < ball.ycor() < 320:
+        if ball.distance(brick) < 60 and 260 < ball.ycor() < 280:
             ball.bounce_y()
             brick.reset()
             ball.move_speed *= 0.9
 
     for brick in layer6.layer_6:
-        if ball.distance(brick) < 60 and 320 < ball.ycor() < 360:
+        if ball.distance(brick) < 60 and 290 < ball.ycor() < 310:
             ball.bounce_y()
             brick.reset()
             ball.move_speed *= 0.9
 
     for brick in layer7.layer_7:
-        if ball.distance(brick) < 60 and 360 < ball.ycor() < 400:
+        if ball.distance(brick) < 60 and 320 < ball.ycor() < 340:
             ball.bounce_y()
             brick.reset()
             ball.move_speed *= 0.9
